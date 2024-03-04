@@ -105,7 +105,7 @@ contract TestVault is Test {
         assertEq(vault.asset(), address(underlying));
     }
 
-    function test_fiveUsersJustDepositAndWithdraw() public {
+    function test_fiveUsersJustDepositAndWithdraw_1() public {
         
         console.log("Vault is empty");
         console.log("1 Share is worth: ", vault.previewRedeem(1 * 1e18), " tokens");
@@ -241,7 +241,6 @@ contract TestVault is Test {
         console.log("Everyone exited the vault.");
         console.log("1 Share is worth: ", vault.previewRedeem(1 * 1e18), " tokens");
 
-
     }
 
 
@@ -267,9 +266,9 @@ contract TestVault is Test {
         vm.stopPrank();
 
         vm.startPrank(user4);
-        userdeposit = 1 * 1e18; //1 wei
+        userdeposit = 1; //1 wei
         received = vault.deposit(userdeposit, user4);
-        console.log("1 Share is worth: ", vault.previewRedeem(10_000 * 1e18), " tokens");
+        console.log("1 Share WEI is worth: ", vault.previewRedeem(1), " tokens");
         console.log("Received: ", received);
         vm.stopPrank();
 
