@@ -574,24 +574,6 @@ contract TestVault is Test {
     }
 
 
-    function testPriceSourceManipulation() public {
-        /*
-        
-        //seems that it can only be inflated by a donation
-        //vault is setup (3 deposits x 1000)
-        // attacker donates 1000
-        //check price for token
-        //attacker deposits 1000
-        //how many shares attacker has, who received money and who lost? 
-
-        //scenario 2
-        //vault grows, there are yields, but the preview redeem is stale. 
-        //what happens?
-
-
-         */
-    }
-
 
 
 
